@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.views.Sobre"
-             Title="Sobre">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Sobre"
+             BackgroundColor="{StaticResource Black}"
+             NavigationPage.HasNavigationBar="True">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <Label Text="Sobre o Aplicativo"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center"/>
+
+        <Frame BackgroundColor="{StaticResource Gray200}" Padding="20" CornerRadius="10">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Desenvolvedor: Daniel Batista de Carvalho"
+                       FontSize="20"
+                       TextColor="White"/>
+                <Label Text="Ano de Desenvolvimento: 2025"
+                       FontSize="20"
+                       TextColor="White"/>
+                <Label Text="Este aplicativo foi criado para facilitar a contratação de hospedagens de forma rápida e intuitiva."
+                       FontSize="16"
+                       TextColor="White"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"
+                Clicked="OnVoltarClicked"/>
     </VerticalStackLayout>
 </ContentPage>
